@@ -6,10 +6,10 @@ const { Meta } = Card;
 const DEFAULT_IMG =
   "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png";
 
-function ChiaCard({ key, onClick, card }) {
+function ChiaCard({ index, onClick, card }) {
   const { title, description, img, price, hash } = card || {};
   return (
-    <span key={key}>
+    <span key={index}>
       <Card
         hoverable
         onClick={() => {

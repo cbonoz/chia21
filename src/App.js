@@ -85,9 +85,11 @@ const App = () => {
                 <Route exact path="/">
                   <Home />
                 </Route>
-                <Route exact path="/nft/{:nftId}">
-                  <Purchase />
-                </Route>
+                <Route
+                  exact
+                  path="/nft/:nftId"
+                  render={(props) => <Purchase {...props} />}
+                />
                 <Route path="/create">
                   <Create />
                 </Route>
