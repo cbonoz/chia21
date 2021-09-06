@@ -2,7 +2,7 @@
     <img src="./img/chiaspace_3_2.png" width=400/>
 </p>
 
-# Chia-Space
+# Chiaspace
 
 Converts any coin built on Chia to be treatable as a purchasable and tradeable NFT.
 
@@ -19,9 +19,8 @@ Platforms such as opensea exist for NFT discovery on ethereum-based platforms. T
 End goal would be to host this as a project and begin accepting user uploads with payable addresses and shareable links.
 
 - Increase adoption of non-ethereum based NFTs.
-- Leverage Chia's representation of NFTs as coins to reduce friction in transfering and issuing new NFTs.
-- Attach file assets to Chia coins without additional work or friction.
-- User GUI for managing wallet and creating a listing.
+- Leverage Chia's representation of NFTs as coins to reduce friction in transferring and issuing new NFTs.
+- Use low gas fees and underlying Chia protocol to increase coin-based NFT adoption.
 
 ## How it works
 
@@ -29,28 +28,30 @@ End goal would be to host this as a project and begin accepting user uploads wit
 - Stores entries for Chiaspace in a centralized DB for the marketplace (could be distributed storage potentially).
 - Attaches pngs to Chia coin addresses / puzzle hashes using IPFS.
 - Enable searching through existing coins based on name rather than puzzlehash.
+- Underlying coins would still be instrumented / deployed via ChiaLisp.
 
 ## Challenges
 
 - Running chia node locally for RPC calls (would be useful to have hosted tested url's similarly to infura).
 - Integrating Chia wallet (in future work). Currently key would need to be provided to issue RPC calls directly.
 
-## Future Work
+## Future work
 
-- Deploy requires dedicated chia node to answer RPC requests.
-- Need integrated wallet for sign on (ideally something similar to metamask).
-- Needs implementation
+- Integrated wallet for sale / listing of Chia coin NFT entries (ideally similar to metamask).
+- Wallet would need to natively recognize several different coin types.
+- Integration with dedicated Chia node for RPC calls around transfer (via NodeJS chia-agent).
+- Needs dedicated / hosted storage for searchable listings.
+- Website hosting and marketing.
 
-While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT!
+While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT! This project can otherwise be used as a free reference / idea base for other implementations.
 
 ## Screenshots
 
 <!-- TODO -->
 
-## Dev notes
+## Related projects:
 
 - https://chiaforum.com/t/dfi-digital-farming-initiative-the-first-chia-nft-marketplace/12704
--
 
 ## Preview
 

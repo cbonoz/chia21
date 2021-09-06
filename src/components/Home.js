@@ -1,5 +1,6 @@
-import { Button, Input } from "antd";
+import { Button, Input, Spin } from "antd";
 import React, { useState, useEffect } from "react";
+import ChiaCard from "./Chiacard";
 
 export default function Home() {
   const [query, setQuery] = useState();
@@ -22,6 +23,10 @@ export default function Home() {
       <Button onClick={search} />
       Search<Button></Button>
       <hr />
+      {loading && <Spin size="large" />}
+      {!loading && results.map((r ,i) => {
+          return <ChiaCard key={i} card={r} onClick={onClick}/>
+      })}
     </div>
   );
 }

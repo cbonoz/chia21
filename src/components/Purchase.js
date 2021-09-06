@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Purchase(props) {
-  return <div></div>;
+  return <div>
+      
+  </div>;
 }
 
 Purchase.propTypes = {};
