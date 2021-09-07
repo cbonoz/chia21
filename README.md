@@ -1,5 +1,5 @@
 <p align='center'>
-    <img src="./img/chiaspace_3_2.png" width=400/>
+    <img src="./img/header.png" width=400/>
 </p>
 
 # Chiaspace
