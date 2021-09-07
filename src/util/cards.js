@@ -21,4 +21,8 @@ const createCardList = () => {
   return cards;
 };
 
+export const appendCard = (c) => {
+    DEMO_CARDS.push(c)
+}
+
 export const DEMO_CARDS = createCardList();

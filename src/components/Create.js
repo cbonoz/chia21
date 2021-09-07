@@ -4,12 +4,13 @@ import { Input, Button, Steps, Layout } from "antd";
 import { FileDropzone } from "./FileDropzone";
 import { storeFiles } from "../util/stor";
 import { getIpfsUrl } from "../util";
+import { appendCard } from "../util/cards";
 
 const { Header, Footer, Sider, Content } = Layout;
 
 const { Step } = Steps;
 
-const LAST_STEP = 3;
+const LAST_STEP = 2;
 function Create({ isLoggedIn, address }) {
   const [currentStep, setCurrentStep] = useState(0);
   const [files, setFiles] = useState([]);
@@ -41,7 +42,6 @@ function Create({ isLoggedIn, address }) {
       // https://docs.web3.storage/how-tos/store/#preparing-files-for-upload
 
       let cid;
-      let streamId;
       try {
         const fileObjects = [
           ...files.map((x) => x),
@@ -58,14 +58,16 @@ function Create({ isLoggedIn, address }) {
 
       const data = {
         cid,
-        streamId,
+        hash: cid,
         ipfs: getIpfsUrl(cid),
+        ...info,
       };
       console.log("upload", data);
+      appendCard(data);
       setResult(data);
-    } else if (nextStep === 2) {
+    } else if (nextStep === 1) {
       if (!info.address || !info.title) {
-        alert("Store name and payment address are required");
+        alert("Name and payment address are required");
         return;
       }
     }

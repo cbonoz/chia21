@@ -82,9 +82,7 @@ const App = () => {
           <Content>
             <Switch>
               <div className="container">
-                <Route exact path="/">
-                  <Home />
-                </Route>
+                <Route exact path="/" render={(props) => <Home {...props} />} />
                 <Route
                   exact
                   path="/nft/:nftId"
