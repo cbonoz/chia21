@@ -10,7 +10,19 @@ Built for the Build on Chia hackathon. Going after the 'Improved NFT' category.
 
 Slides: https://docs.google.com/presentation/d/1Vb4PSAf5_2Hm5rlaL4zCIEeAncJ1iyX_QXR7_cytg_I/edit?usp=sharing
 
-<!-- Demo:  -->
+<!-- Demo:  
+* NFT volume surge https://cointelegraph.com/news/opensea-trading-volume-explodes-76-240-ytd-amid-nft-boom
+* NFT fees have never been higher
+* Slides (intro chiaspace)
+* Demo
+- Existing NFT's
+- Have an existing coin or puzzle hash
+- Upload with a png or other asset
+- Other users can purchase that coin from me, with the IPFS url tied to it
+- Create wallet to accept or send payments to chia addresses
+* End with github
+
+-->
 
 ## Motivation
 
