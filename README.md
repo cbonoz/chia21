@@ -55,17 +55,17 @@ The end goal would be to host this as a project and accept user uploads with pay
 - Needs dedicated / hosted storage for searchable listings.
 - Website hosting and marketing.
 
-While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT! This project can otherwise be used as a free reference / idea base for other implementations.
+While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT! Alternatively, this project be used as a free open-source reference / idea base for other implementations.
 
 ## Screenshots
 
 <p align='center'>
-<img src="./img/listing.png" width=800/>
-<img src="./img/info.png" width=800/>
-<img src="./img/image.png" width=800/>
-<img src="./img/done.png" width=800/>
-<img src="./img/purchase.png" width=800/>
-<img src="./img/zoom.png" width=800/>
+    <img src="./img/listing.png" width=800/>
+    <img src="./img/info.png" width=800/>
+    <img src="./img/image.png" width=800/>
+    <img src="./img/done.png" width=800/>
+    <img src="./img/purchase.png" width=800/>
+    <img src="./img/zoom.png" width=800/>
 </p>
 
 ## Related projects:

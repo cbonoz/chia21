@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { DEMO_CARDS } from "../util/cards";
-import { Row, Col, Image, Button, Spin } from "antd";
-
-import PropTypes from "prop-types";
+import { Row, Col, Image, Modal, Button, Spin } from "antd";
 
 function Purchase({ match }) {
   const [cards, setCard] = useState(DEMO_CARDS);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
   const [loading, setLoading] = useState();
   const nftId = match.params.nftId;
 
@@ -18,12 +18,18 @@ function Purchase({ match }) {
 
   const purchase = async () => {
     setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setIsModalVisible(true);
+    }, 2000);
+  };
 
-    setLoading(false);
+  const handleOk = () => {
+    setIsModalVisible(false);
   };
 
   return (
-    <div>
+    <div className="content">
       <h1>Purchase NFT</h1>
       {nftId}
       <br />
@@ -39,11 +45,16 @@ function Purchase({ match }) {
               <h1>{matchingCard.title}</h1>
               <h3>{matchingCard.description}</h3>
               <h4>Price: {matchingCard.price} mojos</h4>
+              <p>{matchingCard.hash}</p>
+
+              {matchingCard.createdAt && (
+                <p>First created: {matchingCard.createdAt}</p>
+              )}
               <br />
               <br />
 
               <Button onClick={purchase} loading={loading}>
-                Buy now
+                Buy now ({matchingCard.price} mojos)
               </Button>
             </div>
           </Col>
@@ -52,6 +63,14 @@ function Purchase({ match }) {
           </Col>
         </Row>
       )}
+      <Modal
+        title={`${matchingCard?.title || "NFT"} purchased!`}
+        visible={isModalVisible}
+        onOk={handleOk}
+        // onCancel={handleCancel}
+      >
+        <p>Token has been added to your wallet.</p>
+      </Modal>
     </div>
   );
 }

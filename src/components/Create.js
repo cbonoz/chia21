@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Input, Button, Steps, Layout } from "antd";
 import { FileDropzone } from "./FileDropzone";
 import { storeFiles } from "../util/stor";
-import { getIpfsUrl } from "../util";
+import { APP_NAME, getIpfsUrl } from "../util";
 import { appendCard } from "../util/cards";
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -44,7 +44,9 @@ function Create({ isLoggedIn, address }) {
       let cid;
       try {
         const fileObjects = [
-          ...files.map((x) => x),
+          ...files.map((myFile) => {
+            return new File([myFile], "item.png", { type: myFile.type });
+          }),
           //   new File([blob], infoFileName),
         ];
         cid = await storeFiles(fileObjects);
@@ -55,12 +57,13 @@ function Create({ isLoggedIn, address }) {
       } finally {
         setLoading(false);
       }
-
+      const ipfs = getIpfsUrl(cid);
       const data = {
+        ...info,
         cid,
         hash: cid,
-        ipfs: getIpfsUrl(cid),
-        ...info,
+        ipfs,
+        img: `${ipfs}/item.png`,
       };
       console.log("upload", data);
       appendCard(data);
@@ -164,7 +167,7 @@ function Create({ isLoggedIn, address }) {
 
   return (
     <div className="content">
-      <h1>Create a new Chiaspace listing.</h1>
+      <h1>Create a new {APP_NAME} listing.</h1>
       <Header>
         <Steps current={currentStep}>
           <Step title="Information" description="What NFT are you creating?" />

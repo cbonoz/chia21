@@ -47,6 +47,7 @@ export function FileDropzone({ files, setFiles }) {
         )
       );
     },
+    maxFiles: 1,
   });
 
   const thumbs = files.map((file) => {

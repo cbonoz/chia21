@@ -30,6 +30,7 @@ import {
   useParams,
 } from "react-router-dom";
 import Purchase from "./components/Purchase";
+import { APP_NAME } from "./util";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -97,7 +98,7 @@ const App = () => {
               </div>
             </Switch>
           </Content>
-          <Footer>Chiaspace &copy; 2021 - Build and Create on Chia</Footer>
+          <Footer>{APP_NAME} &copy; 2021 - Build and Create on Chia</Footer>
         </Router>
       </Layout>
     </>

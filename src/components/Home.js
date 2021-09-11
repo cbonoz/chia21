@@ -2,6 +2,7 @@ import { Button, Input, Spin } from "antd";
 import React, { useState, useEffect } from "react";
 import { DEMO_CARDS } from "../util/cards";
 import ChiaCard from "./ChiaCard";
+import chia from "../assets/chia_logo.png";
 
 export default function Home({ history }) {
   const [query, setQuery] = useState();
@@ -28,9 +29,11 @@ export default function Home({ history }) {
   };
   return (
     <div>
-      <h1>Discover NFTs on Chia</h1>
+      <h1>
+        Discover NFTs on <img src={chia} className='header-icon' />
+      </h1>
       <Input
-        placeholder="Search NFTs/coins"
+        placeholder="Search by puzzle hash, address, or NFT name"
         onChange={(e) => setQuery(e.target.value)}
         value={query}
       />

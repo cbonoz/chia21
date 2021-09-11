@@ -7,7 +7,7 @@ export const createCard = () => {
     description: faker.commerce.productDescription(),
     img: faker.image.imageUrl(),
     price: 300,
-    hash: faker.finance.ethereumAddress(),
+    hash: "xch1xar5z8sp6w0a45wfzs95v0kf4cw63fwm66dgda706dc5y7nnrueq7u7p30" //    faker.finance.ethereumAddress(),
   };
 };
 

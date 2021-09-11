@@ -1,5 +1,7 @@
 export const BASE_URL = window.location.origin;
 
+export const APP_NAME = "Chiaspace";
+
 export const capitalize = (s) => {
   if (typeof s !== "string") return "";
   return s.charAt(0).toUpperCase() + s.slice(1);
