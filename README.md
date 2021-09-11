@@ -4,13 +4,13 @@
 
 # Chiaspace
 
-Converts any coin built on Chia to be treatable as a purchasable and tradeable NFT.
+Chiaspace is an app that converts any coin built on Chia to be treatable as a purchasable and tradeable NFT.
 
 Built for the Build on Chia hackathon. Going after the 'Improved NFT' category.
 
 Slides: https://docs.google.com/presentation/d/1Vb4PSAf5_2Hm5rlaL4zCIEeAncJ1iyX_QXR7_cytg_I/edit?usp=sharing
 
-<!-- Demo:  
+<!-- Demo:
 * NFT volume surge https://cointelegraph.com/news/opensea-trading-volume-explodes-76-240-ytd-amid-nft-boom
 * NFT fees have never been higher
 * Slides (intro chiaspace)
@@ -26,26 +26,26 @@ Slides: https://docs.google.com/presentation/d/1Vb4PSAf5_2Hm5rlaL4zCIEeAncJ1iyX_
 
 ## Motivation
 
-Platforms such as opensea exist for NFT discovery on ethereum-based platforms. This project can serve as an open source base for Chia NFTs.
+Platforms such as Opensea exist for NFT discovery on Ethereum-based platforms. This project can serve as an open-source base for Chia NFTs.
 
-End goal would be to host this as a project and begin accepting user uploads with payable addresses and shareable links.
+The end goal would be to host this as a project and accept user uploads with payable addresses and shareable links.
 
-- Increase adoption of non-ethereum based NFTs.
+- Increase adoption of non-Ethereum based NFTs.
 - Leverage Chia's representation of NFTs as coins to reduce friction in transferring and issuing new NFTs.
 - Use low gas fees and underlying Chia protocol to increase coin-based NFT adoption.
 
 ## How it works
 
 - Converts a chia coin into a tradeable NFT by attaching hosted image files.
-- Stores entries for Chiaspace in a centralized DB for the marketplace (could be distributed storage potentially).
+  Stores entries for Chiaspace in a centralized DB for the marketplace (distributed storage could be another option).
 - Attaches pngs to Chia coin addresses / puzzle hashes using IPFS.
-- Enable searching through existing coins based on name rather than puzzlehash.
-- Underlying coins would still be instrumented / deployed via ChiaLisp.
+- Enable searching through existing coins based on name rather than puzzle hash.
+- Underlying coins would still be instrumented/deployed via ChiaLisp.
 
 ## Challenges
 
-- Running chia node locally for RPC calls (would be useful to have hosted tested url's similarly to infura).
-- Integrating Chia wallet (in future work). Currently key would need to be provided to issue RPC calls directly.
+- Running chia node locally for RPC calls (would be helpful to have hosted test url's similarly to Infura).
+- Integrating Chia wallet (in future work) - Currently, the application would need a key to issue RPC calls directly.
 
 ## Future work
 
