@@ -1,45 +1,19 @@
 import React, { useState, useEffect } from "react";
-import {
-  Form,
-  Select,
-  InputNumber,
-  DatePicker,
-  Slider,
-  Menu,
-  Breadcrumb,
-  Layout,
-  Button,
-  Rate,
-  Typography,
-  Space,
-  Divider,
-} from "antd";
-import { useHistory } from "react-router-dom";
-
+import { Select, Menu, Layout, Typography, Tooltip } from "antd";
 import logo from "./assets/chiaspace_white.png";
-import "./App.less";
 import Home from "./components/Home";
 import Wallet from "./components/Wallet";
-import Create from "./components/Create";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
 import Purchase from "./components/Purchase";
-import { APP_NAME } from "./util";
+import Create from "./components/Create";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { APP_NAME, DEMO_ADDRESS } from "./util";
+import "./App.less";
 
 const { Header, Footer, Sider, Content } = Layout;
 
-const { Option } = Select;
-const { Title } = Typography;
-
 const App = () => {
   const [selectedKey, setSelectedKey] = useState();
-  const [address, setAddress] = useState("XXX"); // TODO
+  const [address, setAddress] = useState(DEMO_ADDRESS); // TODO
 
   const getSelectedKey = (r) => {
     switch (r) {
@@ -82,7 +56,9 @@ const App = () => {
 
               {address && (
                 <span className="logged-in">
-                  Logged in: {address.substring(0, 4)}...
+                  <Tooltip placement="bottom" title={address}>
+                    Logged in: {address.substring(0, 4)}...
+                  </Tooltip>
                 </span>
               )}
             </Menu>
@@ -93,8 +69,8 @@ const App = () => {
                 <Route exact path="/" render={(props) => <Home {...props} />} />
                 <Route
                   exact
-                  path="/nft/:nftId"
-                  render={(props) => <Purchase {...props} />}
+                  path="/nft/:index/:nftId"
+                  render={(props) => <Purchase address={address} {...props} />}
                 />
                 <Route path="/create">
                   <Create />

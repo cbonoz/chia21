@@ -3237,10 +3237,10 @@ chardet@^0.7.0:
   resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chia-agent@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/chia-agent/-/chia-agent-2.0.3.tgz#b999ccec066bcf1ae1bf369408434a3ef7222a1b"
-  integrity sha512-GLgxjTtyTX/+MXZxTyW8iz1iaO2SZqgp5U5R/bKBVcgcbs+BK4Bf1jDj+BYPUot/LvQ1X4aedx38r5DvDx0DtQ==
+chia-agent@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/chia-agent/-/chia-agent-2.0.4.tgz#4c6a236973b1e01f6667f2e7b0672fbb6ff974bb"
+  integrity sha512-T/3sRs5OqX8KOa/eT3oj/ALgDSZTdvnbXKfcKOzQwxkfKXhqUPOTV/fVJoaflF+mvy9xRxHGDFqVQ0vX7RVfdg==
   dependencies:
     ws "^7.4.6"
     yaml "^1.10.2"
@@ -3254,7 +3254,7 @@ chia-client@^9.5.0:
     chia-utils "^1.0.2"
     yaml "2.0.0-5"
 
-chia-utils@^1.0.2:
+chia-utils@^1.0.2, chia-utils@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/chia-utils/-/chia-utils-1.0.5.tgz#c51a06d652c1b7a9ceb0b336ec33956a2916c672"
   integrity sha512-jYarns5KJBIXOStBkpisXwvI0WvanSm1IaXamu6K7ZawbMt1wodK1UrRAbQpw+I6M91ElRN5uomoI77MRRO94Q==
@@ -12850,9 +12850,9 @@ ws@^6.1.2, ws@^6.2.1:
     async-limiter "~1.0.0"
 
 ws@^7.4.6:
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.4.tgz#56bfa20b167427e138a7795de68d134fe92e21f9"
-  integrity sha512-zP9z6GXm6zC27YtspwH99T3qTG7bBFv2VIkeHstMLrLlDJuzA7tQ5ls3OJ1hOGGCzTQPniNJoHXIAOS0Jljohg==
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.5.tgz#8b4bc4af518cfabd0473ae4f99144287b33eb881"
+  integrity sha512-BAkMFcAzl8as1G/hArkxOxq3G7pjUqQ3gzYbLL0/5zNkph70e+lCoxBGnm6AW1+/aiNeV4fnKqZ8m4GZewmH2w==
 
 xml-name-validator@^3.0.0:
   version "3.0.0"

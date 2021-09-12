@@ -2,6 +2,9 @@ export const BASE_URL = window.location.origin;
 
 export const APP_NAME = "Chiaspace";
 
+export const DEMO_ADDRESS =
+  "txch1slr0k27axjnhv2slnj8s4ddy079kcn2het0yeld86fpyryqdrfmsdej8c9";
+
 export const capitalize = (s) => {
   if (typeof s !== "string") return "";
   return s.charAt(0).toUpperCase() + s.slice(1);
@@ -25,4 +28,4 @@ export function bytesToSize(bytes) {
 
 export const getCheckoutUrl = (cid) => `${BASE_URL}/pages/${cid}`;
 
-export const getIpfsUrl = (cid) => `ipfs.io/ipfs/${cid}`;
+export const getIpfsUrl = (cid) => `https://ipfs.io/ipfs/${cid}`;

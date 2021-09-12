@@ -9,9 +9,9 @@ export default function Home({ history }) {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState();
 
-  const onClick = (hash) => {
+  const onClick = (index, hash) => {
     // TODO: navigate to purchase page.
-    const path = `/nft/${hash}`;
+    const path = `/nft/${index}/${hash}`;
     // window.location.pathname = ;
     history.push(path);
   };
@@ -29,8 +29,8 @@ export default function Home({ history }) {
   };
   return (
     <div>
-      <div className='header-text'>
-        Discover NFTs on <img src={chia} className='header-icon' />
+      <div className="header-text">
+        Discover NFTs on <img src={chia} className="header-icon" />
       </div>
       <Input
         placeholder="Search by puzzle hash, address, or NFT name"

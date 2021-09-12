@@ -3,8 +3,7 @@ import { Card } from "antd";
 
 const { Meta } = Card;
 
-const DEFAULT_IMG =
-  "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png";
+const DEFAULT_IMG = "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png";
 
 function ChiaCard({ index, onClick, card }) {
   const { title, description, img, price, hash } = card || {};
@@ -13,12 +12,12 @@ function ChiaCard({ index, onClick, card }) {
       <Card
         hoverable
         onClick={() => {
-          onClick && onClick(hash);
+          onClick && onClick(index, hash);
         }}
         style={{ width: 240 }}
         cover={<img alt={title} src={img || DEFAULT_IMG} />}
       >
-        <Meta title={title} description={description + " " + price} />
+        <Meta title={title} description={description} />
       </Card>
     </span>
   );

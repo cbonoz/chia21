@@ -1,21 +1,19 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { DEMO_CARDS } from "../util/cards";
 import { Row, Col, Image, Modal, Button, Spin, notification, Card } from "antd";
+import { createCoinUrl } from "../util/chia";
 
-function Purchase({ match, history }) {
-  const [cards, setCard] = useState(DEMO_CARDS);
+function Purchase({ match, history, address }) {
+  const [cards, setCard] = useState(DEMO_CARDS || []);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
 
   const [loading, setLoading] = useState();
-  const nftId = match.params.nftId;
+  const { nftId, index } = match.params;
 
-  const matchingCard = useMemo(
-    () => cards.find((x) => x.hash === nftId),
-    [nftId, cards]
-  );
+  const matchingCard = cards[index];
 
-  console.log("card", DEMO_CARDS, nftId, matchingCard);
+  console.log("card", cards, nftId, index, matchingCard);
 
   const purchase = async () => {
     setLoading(true);
@@ -59,7 +57,12 @@ function Purchase({ match, history }) {
               <Card size="large" title={matchingCard.title}>
                 <h3>{matchingCard.description}</h3>
                 <h4>Price: {matchingCard.price} mojos</h4>
-                <p>Coin: {matchingCard.hash}</p>
+                <p>
+                  Coin:{" "}
+                  <a href={createCoinUrl(matchingCard.hash)} target="_blank">
+                    {matchingCard.hash}
+                  </a>
+                </p>
 
                 {matchingCard.createdAt && (
                   <p>First created: {matchingCard.createdAt}</p>
@@ -85,7 +88,7 @@ function Purchase({ match, history }) {
         </Row>
       )}
       <Modal
-        title={`${matchingCard?.title || "NFT"} purchased!`}
+        title={`Confirm purchase: ${matchingCard?.title || "NFT"}`}
         visible={isModalVisible}
         okText="Confirm Purchase"
         confirmLoading={loading}
@@ -95,6 +98,7 @@ function Purchase({ match, history }) {
         <p>
           Purchase {matchingCard?.title} for {matchingCard?.price} mojos?
         </p>
+        {address && <p>Wallet with address {address} will be charged.</p>}
       </Modal>
     </div>
   );

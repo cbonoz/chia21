@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Input } from "antd";
-import { generateWallet } from "../util/chia";
+import { generateWallet, generateAddress } from "../util/chia";
 import { Card } from "antd";
 
 import { APP_NAME } from "../util";

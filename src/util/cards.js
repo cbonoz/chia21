@@ -5,15 +5,20 @@ faker.seed(123);
 
 export const createCard = () => {
   const title = faker.animal.cat();
-  const img = faker.image.animals();
+  const img = `${faker.image.animals()}?random=${Math.round(
+    Math.random() * 1000
+  )}`;
   const price = parseInt(faker.finance.amount());
+  const c = faker.date.recent();
+  const createdAt = `${c.toDateString()} ${c.toLocaleTimeString()}`;
   console.log(title, img, price);
   return {
     title,
-    description: `Own an NFT of ${title}. 1 of 1 available.`,
+    description: `Own a NFT of ${title}. 1 of 1 available.`,
     img,
     price,
-    hash: "xch1xar5z8sp6w0a45wfzs95v0kf4cw63fwm66dgda706dc5y7nnrueq7u7p30", //    faker.finance.ethereumAddress(),
+    hash: "0x36b520fd8f949a8a7466eb103b1dfadd4caf71c384533026d4ca18c2e59982c5",
+    createdAt,
   };
 };
 

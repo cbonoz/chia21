@@ -3,14 +3,16 @@ import React, { useState, useEffect } from "react";
 import { Input, Button, Steps, Layout } from "antd";
 import { FileDropzone } from "./FileDropzone";
 import { storeFiles } from "../util/stor";
-import { APP_NAME, getIpfsUrl } from "../util";
+import { APP_NAME, DEMO_ADDRESS, getIpfsUrl } from "../util";
 import { appendCard } from "../util/cards";
+import axios from "axios";
 
 const { Header, Footer, Sider, Content } = Layout;
 
 const { Step } = Steps;
 
 const LAST_STEP = 2;
+
 function Create({ isLoggedIn, address }) {
   const [currentStep, setCurrentStep] = useState(0);
   const [files, setFiles] = useState([]);
@@ -18,7 +20,7 @@ function Create({ isLoggedIn, address }) {
     title: "My Chia NFT",
     description: "Test",
     price: 0,
-    address: "",
+    address: DEMO_ADDRESS,
   }); // price in mojos
   const [result, setResult] = useState({});
   const [publishResult, setPublishResult] = useState();
@@ -58,12 +60,22 @@ function Create({ isLoggedIn, address }) {
         setLoading(false);
       }
       const ipfs = getIpfsUrl(cid);
+      const url = `${ipfs}/item.png`;
+      // "ipfs.io/ipfs/bafybeihdhw6zoke5bf3sqqro4buo5feiec4wnckwye2qgqppqbkq35druu/item.png"
+      let img;
+      try {
+        const response = await axios.get(url, { responseType: "blob" });
+        img = URL.createObjectURL(response.data);
+      } catch (e) {
+        console.error("error reading image", e);
+      }
       const data = {
         ...info,
         cid,
         hash: cid,
         ipfs,
-        img: `${ipfs}/item.png`,
+        url,
+        img,
       };
       console.log("upload", data);
       appendCard(data);
@@ -71,6 +83,9 @@ function Create({ isLoggedIn, address }) {
     } else if (nextStep === 1) {
       if (!info.address || !info.title) {
         alert("Name and payment address are required");
+        return;
+      } else if (info.price === 0) {
+        alert("Price must be greater than 0");
         return;
       }
     }
@@ -103,7 +118,7 @@ function Create({ isLoggedIn, address }) {
               placeholder="Enter price"
               type="number"
               value={info.price}
-              onChange={(e) => updateInfo({ price: e.target.value })}
+              onChange={(e) => updateInfo({ price: parseInt(e.target.value) })}
             />
 
             <Input
