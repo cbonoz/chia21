@@ -1,22 +1,21 @@
 <p align='center'>
     <img src="./img/header.png" width=400/>
 </p>
-
 # Chiaspace
 
 Chiaspace is an app that converts any coin built on Chia to be treatable as a purchasable and tradeable NFT.
 
 Built for the Build on Chia hackathon. Going after the 'Improved NFT' category.
 
-<b>Note this project is currently for demo purposes only and requires logic to connect to Chia mainnet via RPC to be production ready.</b>
+<b>Note this project is currently for demo purposes only and requires logic to connect to Chia mainnet via RPC to be production-ready.</b>
 
 Slides: https://docs.google.com/presentation/d/1Vb4PSAf5_2Hm5rlaL4zCIEeAncJ1iyX_QXR7_cytg_I/edit?usp=sharing
 
 ## Motivation
 
-Platforms such as Opensea exist for NFT discovery on Ethereum-based platforms. This project can serve as an open-source base for Chia NFTs.
+Platforms such as Opensea exist for NFT discovery on Ethereum-based platforms; this project can serve as an open-source base for Chia NFTs.
 
-The end goal would be to host this as a project and accept user uploads with payable addresses and shareable links.
+The end goal would be to host this project and accept user uploads with payable addresses and shareable links.
 
 - Increase adoption of non-Ethereum based NFTs.
 - Leverage Chia's representation of NFTs as coins to reduce friction in transferring and issuing new NFTs.
@@ -26,24 +25,24 @@ The end goal would be to host this as a project and accept user uploads with pay
 
 - Converts a chia coin into a tradeable NFT by attaching hosted image files.
   Stores entries for Chiaspace in a centralized DB for the marketplace (distributed storage could be another option).
-- Attaches pngs to Chia coin addresses / puzzle hashes using IPFS.
+- Attaches pngs to Chia coin addresses/puzzle hashes using IPFS.
 - Enable searching through existing coins based on name rather than puzzle hash.
 - Underlying coins would still be instrumented/deployed via ChiaLisp.
 
 ## Challenges
 
-- Running chia node locally for RPC calls (would be helpful to have hosted test url's similarly to Infura).
+- Running chia node locally for RPC calls (would be helpful to have hosted test URLs similarly to Infura).
 - Integrating Chia wallet (in future work) - Currently, the application would need a key to issue RPC calls directly.
 
 ## Future work
 
-- Integrated wallet for sale / listing of Chia coin NFT entries (ideally similar to metamask).
-- Wallet would need to natively recognize several different coin types.
+- Integrated wallet for sale/listing of Chia coin NFT entries (ideally similar to Metamask).
+- Wallet would need to recognize several different coin types natively.
 - Integration with dedicated Chia node for RPC calls around transfer (via NodeJS chia-agent).
-- Needs dedicated / hosted storage for searchable listings.
+- Needs dedicated/hosted storage for searchable listings.
 - Website hosting and marketing.
 
-While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT! Alternatively, this project be used as a free open-source reference / idea base for other implementations.
+While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT! Alternatively, this project is used as a free, open-source reference/idea base for other implementations.
 
 <!-- Demo:
 * NFT volume surge https://cointelegraph.com/news/opensea-trading-volume-explodes-76-240-ytd-amid-nft-boom
