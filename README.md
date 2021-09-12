@@ -66,6 +66,8 @@ While not a ChiaLisp implementation, I hope this prototype qualifies for hackath
     <img src="./img/done.png" width=800/>
     <img src="./img/purchase.png" width=800/>
     <img src="./img/zoom.png" width=800/>
+    <img src="./img/complete.png" width=800/>
+    <img src="./img/wallet.png" width=800/>
 </p>
 
 ## Related projects:

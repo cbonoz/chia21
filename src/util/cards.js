@@ -24,7 +24,7 @@ export const createCard = () => {
 
 const createCardList = () => {
   const cards = [];
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 5; i++) {
     const c = createCard();
     cards.push(c);
   }
