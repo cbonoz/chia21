@@ -8,21 +8,9 @@ Chiaspace is an app that converts any coin built on Chia to be treatable as a pu
 
 Built for the Build on Chia hackathon. Going after the 'Improved NFT' category.
 
+<b>Note this project is currently for demo purposes only and requires logic to connect to Chia mainnet via RPC to be production ready.</b>
+
 Slides: https://docs.google.com/presentation/d/1Vb4PSAf5_2Hm5rlaL4zCIEeAncJ1iyX_QXR7_cytg_I/edit?usp=sharing
-
-<!-- Demo:
-* NFT volume surge https://cointelegraph.com/news/opensea-trading-volume-explodes-76-240-ytd-amid-nft-boom
-* NFT fees have never been higher
-* Slides (intro chiaspace)
-* Demo
-- Existing NFT's
-- Have an existing coin or puzzle hash
-- Upload with a png or other asset
-- Other users can purchase that coin from me, with the IPFS url tied to it
-- Create wallet to accept or send payments to chia addresses
-* End with github
-
--->
 
 ## Motivation
 
@@ -56,6 +44,20 @@ The end goal would be to host this as a project and accept user uploads with pay
 - Website hosting and marketing.
 
 While not a ChiaLisp implementation, I hope this prototype qualifies for hackathon purposes around improving NFT! Alternatively, this project be used as a free open-source reference / idea base for other implementations.
+
+<!-- Demo:
+* NFT volume surge https://cointelegraph.com/news/opensea-trading-volume-explodes-76-240-ytd-amid-nft-boom
+* NFT fees have never been higher
+* Slides (intro chiaspace)
+* Demo
+- Existing NFT's
+- Have an existing coin or puzzle hash
+- Upload with a png or other asset
+- Other users can purchase that coin from me, with the IPFS url tied to it
+- Create wallet to accept or send payments to chia addresses
+* End with github
+
+-->
 
 ## Screenshots
 
