@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Input, Button, Steps, Layout } from "antd";
 import { FileDropzone } from "./FileDropzone";
 import { storeFiles } from "../util/stor";
-import { APP_NAME, DEMO_ADDRESS, getIpfsUrl } from "../util";
+import { APP_NAME, DEMO_ADDRESS, DEMO_HASH, getIpfsUrl } from "../util";
 import { appendCard } from "../util/cards";
 import axios from "axios";
 
@@ -72,7 +72,7 @@ function Create({ isLoggedIn, address }) {
       const data = {
         ...info,
         cid,
-        hash: cid,
+        hash: DEMO_HASH,
         ipfs,
         url,
         img,
@@ -127,6 +127,13 @@ function Create({ isLoggedIn, address }) {
               value={info.address}
               onChange={(e) => updateInfo({ address: e.target.value })}
             />
+
+            {/* <Input
+              addonBefore={"Coin: "}
+              placeholder="Enter coin hash"
+              value={info.coinHash}
+              onChange={(e) => updateInfo({ coinHash: e.target.value })}
+            /> */}
           </div>
         );
 

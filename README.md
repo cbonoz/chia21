@@ -13,7 +13,7 @@ Slides: https://docs.google.com/presentation/d/1Vb4PSAf5_2Hm5rlaL4zCIEeAncJ1iyX_
 
 ## Motivation
 
-Platforms such as Opensea exist for NFT discovery on Ethereum-based platforms; this project can serve as an open-source base for Chia NFTs.
+Platforms such as Opensea exist for NFT discovery on ethereum-based platforms, however these projects often have large gas fees that can inhibit usage. This project can serve as an open source base for a IPFS-based Chia NFT marketplace.
 
 The end goal would be to host this project and accept user uploads with payable addresses and shareable links.
 
@@ -28,6 +28,8 @@ The end goal would be to host this project and accept user uploads with payable 
 - Attaches pngs to Chia coin addresses/puzzle hashes using IPFS.
 - Enable searching through existing coins based on name rather than puzzle hash.
 - Underlying coins would still be instrumented/deployed via ChiaLisp.
+
+This app uses web3.storage for IPFS.
 
 ## Challenges
 
@@ -74,8 +76,14 @@ While not a ChiaLisp implementation, I hope this prototype qualifies for hackath
 ## Related projects:
 
 - https://chiaforum.com/t/dfi-digital-farming-initiative-the-first-chia-nft-marketplace/12704
+- https://chiaforum.com/t/dfi-digital-farming-initiative-has-created-the-first-nft-on-chia/12902
 
 ## Preview
+
+Add the following variable to your environment:
+<pre>
+  REACT_APP_STORAGE_KEY={WEB3_STORAGE_KEY} # web3.storage API key
+</pre>
 
 ```bash
 $ npm install

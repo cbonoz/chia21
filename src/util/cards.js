@@ -1,5 +1,6 @@
 // { title, description, img, price, hash }
 import faker from "faker";
+import { DEMO_HASH } from ".";
 
 faker.seed(123);
 
@@ -17,7 +18,7 @@ export const createCard = () => {
     description: `Own a NFT of ${title}. 1 of 1 available.`,
     img,
     price,
-    hash: "0x36b520fd8f949a8a7466eb103b1dfadd4caf71c384533026d4ca18c2e59982c5",
+    hash: DEMO_HASH,
     createdAt,
   };
 };

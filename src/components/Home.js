@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { DEMO_CARDS } from "../util/cards";
 import ChiaCard from "./ChiaCard";
 import chia from "../assets/chia_logo.png";
-import * as Fuse from "fuse.js";
+import Fuse from "fuse.js";
 
 const options = {
   // isCaseSensitive: false,
@@ -13,7 +13,7 @@ const options = {
   // findAllMatches: false,
   // minMatchCharLength: 1,
   // location: 0,
-  // threshold: 0.6,
+  threshold: 0.6,
   // distance: 100,
   // useExtendedSearch: false,
   // ignoreLocation: false,
