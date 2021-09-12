@@ -3,7 +3,9 @@
 </p>
 # Chiaspace
 
-Chiaspace is an app that converts any coin built on Chia to be treatable as a purchasable and tradeable NFT.
+A marketplace for Chia coins backed by IPFS
+
+Chiaspace is an app that converts coins built on Chia to be purchasable and tradeable as NFTs.
 
 Built for the Build on Chia hackathon. Going after the 'Improved NFT' category.
 
