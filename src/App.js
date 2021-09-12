@@ -39,6 +39,7 @@ const { Title } = Typography;
 
 const App = () => {
   const [selectedKey, setSelectedKey] = useState();
+  const [address, setAddress] = useState();
 
   const getSelectedKey = (r) => {
     switch (r) {
@@ -77,6 +78,10 @@ const App = () => {
 
               <Menu.Item key="3">
                 <Link to={"/wallet"}>Wallet</Link>
+              </Menu.Item>
+
+              <Menu.Item key="4">
+                <span>Logged in: {address || ""}</span>
               </Menu.Item>
             </Menu>
           </Header>

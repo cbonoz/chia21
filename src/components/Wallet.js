@@ -23,7 +23,7 @@ function Wallet(props) {
   };
 
   return (
-    <div>
+    <div className="content">
       <h1>
         Create a wallet to begin using {APP_NAME}, or use your existing address.
       </h1>
@@ -37,24 +37,27 @@ function Wallet(props) {
       <Button onClick={generate} loading={loading} disabled={!pw}>
         Create wallet
       </Button>
+      <br />
       <hr />
-      {result && (
-        <div>
-          <h3>Write down this mnemonic! You will only be shown this once.</h3>
-          <p>
-            You can use the wallet to generate addresses for use with {APP_NAME}
-            .
-          </p>
-          {result.mnemonic.split(" ").map((c, i) => {
-            return (
-              <Card key={i} style={{ width: 300 }}>
-                {c}
-              </Card>
-            );
-          })}
-          <p>{JSON.stringify(result)}</p>
-        </div>
-      )}
+      <div className="wallet-area">
+        {result && (
+          <div>
+            <h3>Write down this mnemonic! You will only be shown this once.</h3>
+            <p>
+              You can use the wallet to generate addresses for use with{" "}
+              {APP_NAME}.
+            </p>
+            {result.mnemonic.split(" ").map((c, i) => {
+              return (
+                <Card key={i} style={{ width: 300 }}>
+                  {c}
+                </Card>
+              );
+            })}
+            <p>{JSON.stringify(result)}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -10,6 +10,18 @@
   pointer-events: none;
 }
 
+.wallet-area {
+  margin: 25px;
+}
+
+.header-text,
+.ant-card-head-title {
+  font-weight: 500px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 48px;
+}
+
 .ant-layout-content {
   background: white;
 }
@@ -35,7 +47,15 @@
   }
   .purchase-info {
     margin-right: 20px;
-    margin-top: 80px;
+    // margin-top: 40px;
+  }
+
+  .purchase-content {
+    margin-top: 20px;
+  }
+
+  .purchase-button {
+    margin-top: 110px;
   }
 
   input {
@@ -44,6 +64,13 @@
   }
   button {
     // margin: 10px;
+  }
+}
+
+.sell-area {
+  margin-top: 40px;
+  .ant-input-group-addon {
+    width: 250px;
   }
 }
 
@@ -59,10 +86,21 @@
 
 .header-icon {
   height: 30px;
+  margin-bottom: 8px;
 }
 
 .content {
   padding: 25px;
+
+  .ant-card-head {
+    background: #eee;
+    // display: flex;
+  }
+  .ant-card {
+    display: block;
+    overflow: hidden;
+    margin: 0px;
+  }
 }
 
 .content .ant-layout-header {

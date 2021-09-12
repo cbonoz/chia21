@@ -29,9 +29,9 @@ export default function Home({ history }) {
   };
   return (
     <div>
-      <h1>
+      <div className='header-text'>
         Discover NFTs on <img src={chia} className='header-icon' />
-      </h1>
+      </div>
       <Input
         placeholder="Search by puzzle hash, address, or NFT name"
         onChange={(e) => setQuery(e.target.value)}

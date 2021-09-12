@@ -83,7 +83,7 @@ function Create({ isLoggedIn, address }) {
       case 0:
         return (
           <div>
-            <h2 className="sell-header">General information:</h2>
+            {/* <h2 className="sell-header">General information:</h2> */}
             <Input
               addonBefore={"Title: "}
               placeholder="Enter title:"
@@ -118,7 +118,7 @@ function Create({ isLoggedIn, address }) {
       case 1:
         return (
           <div>
-            <h2 className="sell-header">Enter NFT information:</h2>
+            <h2 className="sell-header">Attach file:</h2>
             <FileDropzone
               info={info}
               files={files}
@@ -171,8 +171,8 @@ function Create({ isLoggedIn, address }) {
       <Header>
         <Steps current={currentStep}>
           <Step title="Information" description="What NFT are you creating?" />
-          <Step title="Upload" description="Attach files." />
-          <Step title="Done" description="View listed NFT." />
+          <Step title="Upload" description="Upload image/file." />
+          <Step title="Done" description="View listed Chia NFT." />
         </Steps>
       </Header>
       <Content>
