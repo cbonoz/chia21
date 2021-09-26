@@ -8,6 +8,7 @@ const DEFAULT_IMG =
 
 function ChiaCard({ index, onClick, card }) {
   const { title, description, img, price, hash } = card || {};
+  const fullDescription = `${description} ${price} mojos.`;
   return (
     <Card
       hoverable
@@ -17,7 +18,7 @@ function ChiaCard({ index, onClick, card }) {
       style={{ width: 240 }}
       cover={<img alt={title} src={img || DEFAULT_IMG} />}
     >
-      <Meta title={title} description={description + " " + price} />
+      <Meta title={title} description={fullDescription} />
     </Card>
   );
 }
